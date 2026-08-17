@@ -8,9 +8,9 @@ import { Separator } from '@/components/ui/separator';
 
 const footerGallery = [
   { img: "/img-liverpool.jpg", title: "Liverpool Headquarters", sub: "131 Mount Pleasant" },
-  { img: "/img-footer-care.jpg", title: "Compassionate Care", sub: "Health & Social Division" },
-  { img: "/img-footer-site.jpg", title: "Commercial Sites", sub: "Construction Division" },
-  { img: "/img-candidate-screening.jpg", title: "Vetting Standards", sub: "100% Pre-Audited" },
+  { img: "/img-footer-care.jpg", title: "Health & Social Care", sub: "Vetted Care & Support" },
+  { img: "/img-footer-site.jpg", title: "Construction Division", sub: "Commercial & Housing" },
+  { img: "/img-candidate-screening.jpg", title: "Compliance Audits", sub: "Quality Assured" },
 ];
 
 export default function Footer() {
@@ -30,14 +30,15 @@ export default function Footer() {
               <img src="/logo.png" alt="Norbitlink Logo" className="h-12 w-auto object-contain shrink-0" />
               <div>
                 <div className="text-lg font-extrabold text-white tracking-tight">NORBITLINK LTD</div>
-                <div className="text-xs text-neutral-400">Connecting People. Supporting Organisations.</div>
+                <div className="text-xs text-neutral-400 font-medium">
+                  Connecting People. Supporting Organisations. Building Better Workforces.
+                </div>
               </div>
             </div>
 
             {/* Tagline */}
-            <p className="text-sm text-neutral-400 leading-relaxed hidden lg:block text-center">
-              Liverpool&apos;s specialist recruitment agency for Health & Social Care and Construction.
-              Vetted. Compliant. Reliable.
+            <p className="text-xs text-neutral-400 leading-relaxed hidden lg:block text-center font-mono">
+              Health & Social Care | Construction | Temporary Staffing | Permanent Recruitment
             </p>
 
             {/* CTAs */}
@@ -84,29 +85,29 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-extrabold text-white mb-4">Norbitlink Ltd</h4>
             <p className="text-xs leading-relaxed mb-5">
-              Liverpool-based specialist recruitment agency providing vetted temporary and permanent workforce solutions across Health & Social Care and Construction.
+              Liverpool-based recruitment agency providing reliable temporary and permanent staff across the Health & Social Care and Construction sectors.
             </p>
             <div className="text-xs font-mono">
-              <strong className="text-white block mb-1">Registered No:</strong>
+              <strong className="text-white block mb-1">Company Number:</strong>
               <span>15012328 (England & Wales)</span>
             </div>
           </div>
 
           {/* Col 2: Services */}
           <div>
-            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-widest mb-4">Services</h4>
+            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-widest mb-4">Our Services</h4>
             <ul className="space-y-2.5 text-xs">
               <li className="flex items-center gap-2 hover:text-cyan-300 transition-colors">
                 <HeartHandshake size={12} className="text-cyan-400 shrink-0" />
-                <Link href="/services/healthcare">Health & Social Care Staffing</Link>
+                <Link href="/services/healthcare">Health & Social Care</Link>
               </li>
               <li className="flex items-center gap-2 hover:text-purple-300 transition-colors">
                 <HardHat size={12} className="text-purple-400 shrink-0" />
-                <Link href="/services/construction">Construction & Trades Recruitment</Link>
+                <Link href="/services/construction">Construction</Link>
               </li>
               <li className="flex items-center gap-2 hover:text-cyan-300 transition-colors">
                 <span className="w-3 h-px bg-cyan-400 shrink-0" />
-                <Link href="/employers">Temporary & Emergency Cover</Link>
+                <Link href="/employers">Temporary Staffing</Link>
               </li>
               <li className="flex items-center gap-2 hover:text-purple-300 transition-colors">
                 <span className="w-3 h-px bg-purple-400 shrink-0" />
@@ -126,7 +127,7 @@ export default function Footer() {
                 { label: 'Construction', href: '/services/construction' },
                 { label: 'For Employers', href: '/employers' },
                 { label: 'For Candidates', href: '/candidates' },
-                { label: 'Contact', href: '/contact' },
+                { label: 'Contact Us', href: '/contact' },
               ].map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="hover:text-white transition-colors">
@@ -143,7 +144,7 @@ export default function Footer() {
             <address className="not-italic space-y-3 text-xs">
               <div className="flex items-start gap-2.5">
                 <MapPin size={14} className="text-cyan-400 shrink-0 mt-0.5" />
-                <span>131 Mount Pleasant, Liverpool, Merseyside, L3 5TF</span>
+                <span>131 Mount Pleasant, Liverpool, L3 5TF</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone size={14} className="text-purple-400 shrink-0" />

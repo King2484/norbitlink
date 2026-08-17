@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Send, CheckCircle2, Clock, Globe, Building2, ShieldCheck, HeartPulse, HardHat, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, CheckCircle2, Clock, Building2, ShieldCheck, HeartPulse, HardHat, ArrowRight } from 'lucide-react';
 import { useModal } from '@/context/ModalContext';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -36,20 +36,19 @@ export default function Contact() {
   return (
     <section className="min-h-screen bg-[#09090b]">
 
-      {/* — PAGE HEADER — */}
+      {/* — PAGE HEADER (Let's Talk) — */}
       <div className="relative bg-neutral-950 border-b border-neutral-800 overflow-hidden">
         <div className="absolute inset-0 bg-mesh-grid opacity-30 pointer-events-none" />
-        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 py-16">
-          <Badge variant="default" className="mb-4">Get In Touch</Badge>
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 py-20">
+          <Badge variant="default" className="mb-4">Contact Us</Badge>
           <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white tracking-tight mb-4">
-            Let&apos;s Discuss Your{' '}
+            Let&apos;s{' '}
             <span className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
-              Staffing Needs.
+              Talk.
             </span>
           </h1>
-          <p className="text-neutral-300 text-base md:text-lg max-w-2xl">
-            Whether you need emergency cover for your healthcare facility, certified trades on your construction site,
-            or are looking for your next rewarding role — our Liverpool team is ready.
+          <p className="text-neutral-300 text-base md:text-lg max-w-2xl leading-relaxed">
+            Whether you need staff or you&apos;re looking for your next opportunity, we&apos;d like to hear from you.
           </p>
         </div>
       </div>
@@ -57,20 +56,29 @@ export default function Contact() {
       {/* — MAIN CONTENT — */}
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 py-16">
 
-        {/* 3-column contact info strip */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-14">
+        {/* 3-column contact info strip with photo cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
           {[
-            { icon: <MapPin size={20} className="text-cyan-400" />, label: 'Liverpool Office', value: '131 Mount Pleasant, Liverpool, L3 5TF' },
-            { icon: <Phone size={20} className="text-purple-400" />, label: 'Direct Telephone', value: '+44 (0) 151 700 8920' },
-            { icon: <Mail size={20} className="text-pink-400" />, label: 'Email Inquiries', value: 'info@norbitlink.co.uk' },
+            { image: '/img-why-liverpool.jpg', icon: <MapPin size={18} className="text-cyan-400" />, label: 'Liverpool Office', value: '131 Mount Pleasant, Liverpool, L3 5TF', sub: 'Company Number: 15012328' },
+            { image: '/img-contact-phone.jpg', icon: <Phone size={18} className="text-purple-400" />, label: 'Direct Telephone', value: '+44 (0) 151 700 8920', sub: '24/7 Operations Desk' },
+            { image: '/img-contact-email.jpg', icon: <Mail size={18} className="text-pink-400" />, label: 'Email Inquiries', value: 'info@norbitlink.co.uk', sub: 'Rapid Response Inbox' },
           ].map((item, i) => (
-            <div key={i} className="flex items-start gap-4 p-6 rounded-3xl bg-neutral-900 border border-neutral-800 shadow-md">
-              <div className="p-3 rounded-2xl bg-neutral-800 border border-neutral-700 shrink-0">
-                {item.icon}
+            <div key={i} className="group rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 flex flex-col justify-between shadow-xl">
+              <div className="relative h-36 w-full overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.label}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent" />
+                <div className="absolute top-3.5 left-3.5 p-2 rounded-xl bg-neutral-950/80 backdrop-blur-md border border-neutral-700">
+                  {item.icon}
+                </div>
               </div>
-              <div>
-                <div className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-wider mb-1">{item.label}</div>
-                <div className="text-sm sm:text-base font-bold text-white">{item.value}</div>
+              <div className="p-6">
+                <div className="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-wider mb-1">{item.label}</div>
+                <div className="text-sm sm:text-base font-bold text-white mb-1 truncate">{item.value}</div>
+                <div className="text-xs text-neutral-400">{item.sub}</div>
               </div>
             </div>
           ))}
@@ -93,7 +101,7 @@ export default function Contact() {
                     inquiryType === 'employer' ? 'bg-cyan-500 text-neutral-950 shadow-md' : 'text-neutral-400 hover:text-white'
                   )}
                 >
-                  I&apos;m an Employer — Need Staff
+                  Employers — Need Staff?
                 </button>
                 <button
                   type="button"
@@ -103,7 +111,7 @@ export default function Contact() {
                     inquiryType === 'candidate' ? 'bg-purple-600 text-white shadow-md' : 'text-neutral-400 hover:text-white'
                   )}
                 >
-                  I&apos;m a Candidate — Looking for Work
+                  Candidates — Looking for Work?
                 </button>
               </div>
 
@@ -223,7 +231,7 @@ export default function Contact() {
                   <img src="/logo.png" alt="Norbitlink Logo" className="h-9 w-auto object-contain" />
                   <div>
                     <div className="text-base font-extrabold text-white">Norbitlink Limited</div>
-                    <div className="text-xs font-mono text-cyan-400">Company No: 15012328</div>
+                    <div className="text-xs font-mono text-cyan-400">Company Number: 15012328</div>
                   </div>
                 </div>
                 
@@ -246,13 +254,13 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Quick Action Cards */}
+            {/* Quick Action Cards (Employers / Candidates) */}
             <div className="grid grid-cols-2 gap-4">
               <div className="p-6 rounded-3xl bg-cyan-950/30 border border-cyan-800/40 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-mono font-bold uppercase text-cyan-400 block mb-1">For Clients</span>
-                  <h4 className="font-bold text-white text-sm mb-3">Urgent Shift Cover?</h4>
-                  <p className="text-[11px] text-neutral-400 mb-4">Fast-track personnel booking.</p>
+                  <span className="text-[10px] font-mono font-bold uppercase text-cyan-400 block mb-1">Employers</span>
+                  <h4 className="font-bold text-white text-sm mb-1.5">Need Staff?</h4>
+                  <p className="text-[11px] text-neutral-400 mb-4">Speak to our recruitment team.</p>
                 </div>
                 <Button onClick={openEmployerModal} size="sm" className="w-full">
                   Request Staff
@@ -261,9 +269,9 @@ export default function Contact() {
 
               <div className="p-6 rounded-3xl bg-purple-950/30 border border-purple-800/40 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-mono font-bold uppercase text-purple-400 block mb-1">For Candidates</span>
-                  <h4 className="font-bold text-white text-sm mb-3">Join Our Talent Pool</h4>
-                  <p className="text-[11px] text-neutral-400 mb-4">Weekly pay & flexible shifts.</p>
+                  <span className="text-[10px] font-mono font-bold uppercase text-purple-400 block mb-1">Candidates</span>
+                  <h4 className="font-bold text-white text-sm mb-1.5">Looking for Work?</h4>
+                  <p className="text-[11px] text-neutral-400 mb-4">Register with Norbitlink today.</p>
                 </div>
                 <Button onClick={() => openCandidateModal('register')} size="sm" className="w-full bg-purple-600 hover:bg-purple-500">
                   Register
@@ -273,71 +281,6 @@ export default function Contact() {
 
           </div>
 
-        </div>
-
-        {/* — DIRECT SECTOR CONTACT CARDS WITH PHOTOS — */}
-        <div>
-          <div className="flex items-center gap-4 mb-8">
-            <div>
-              <span className="text-xs uppercase font-mono font-bold text-cyan-400 block mb-1">Direct Departments</span>
-              <h3 className="text-2xl font-extrabold text-white tracking-tight">Contact Our Dedicated Desks</h3>
-            </div>
-            <Separator className="flex-1 hidden sm:block" />
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
-            {/* Healthcare Desk */}
-            <div className="rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-xl flex flex-col sm:flex-row group">
-              <div className="relative h-48 sm:h-auto sm:w-2/5 overflow-hidden shrink-0">
-                <img
-                  src="/img-healthcare.jpg"
-                  alt="Norbitlink Healthcare Desk"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-neutral-900/80 hidden sm:block" />
-              </div>
-              <div className="p-6 sm:p-8 flex flex-col justify-between flex-1">
-                <div>
-                  <Badge variant="default" className="mb-2">Care & Support</Badge>
-                  <h4 className="text-xl font-bold text-white mb-2">Healthcare Staffing Team</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed mb-4">
-                    For care homes, nursing facilities, and supported living providers across Merseyside.
-                  </p>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-neutral-800">
-                  <span className="text-xs font-mono text-cyan-400 font-bold">0151 700 8920</span>
-                  <Button onClick={openEmployerModal} size="sm">Book Carers</Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Construction Desk */}
-            <div className="rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-xl flex flex-col sm:flex-row group">
-              <div className="relative h-48 sm:h-auto sm:w-2/5 overflow-hidden shrink-0">
-                <img
-                  src="/img-construction.jpg"
-                  alt="Norbitlink Construction Desk"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-neutral-900/80 hidden sm:block" />
-              </div>
-              <div className="p-6 sm:p-8 flex flex-col justify-between flex-1">
-                <div>
-                  <Badge variant="purple" className="mb-2">Trades & Labour</Badge>
-                  <h4 className="text-xl font-bold text-white mb-2">Construction Staffing Team</h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed mb-4">
-                    For main contractors, site managers, and commercial building developments.
-                  </p>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-neutral-800">
-                  <span className="text-xs font-mono text-purple-400 font-bold">0151 700 8920</span>
-                  <Button onClick={openEmployerModal} size="sm" className="bg-purple-600 hover:bg-purple-500 text-white">Book Trades</Button>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </div>
 
       </div>

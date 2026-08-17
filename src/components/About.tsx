@@ -7,36 +7,42 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 
-const whyUs = [
+const whyNorbitlinkList = [
   {
     icon: <ShieldCheck className="text-cyan-400" size={20} />,
-    title: "Rigorous Compliance",
+    title: "Strong Compliance",
     image: "/img-pillar-compliance.jpg",
-    desc: "Comprehensive Right-to-Work, Enhanced DBS, references, and qualification audits before deployment."
+    desc: "Rigorous Right-to-Work, Enhanced DBS, references, training, and qualification verification."
   },
   {
     icon: <UserCheck className="text-purple-400" size={20} />,
-    title: "Dependable Talent Pool",
+    title: "Reliable Candidates",
     image: "/img-pillar-talent.jpg",
-    desc: "Pre-screened professionals ready for immediate temporary shifts, block bookings, or permanent hires."
+    desc: "Dependable professionals ready for immediate temporary shifts, project cover, or permanent roles."
   },
   {
     icon: <Zap className="text-amber-400" size={20} />,
-    title: "Rapid Shift Dispatch",
+    title: "Rapid Response",
     image: "/img-pillar-dispatch.jpg",
-    desc: "Swift turnaround times for emergency shift cover across Merseyside care homes and building sites."
+    desc: "Fast turnaround times for emergency cover across Merseyside care homes and construction sites."
   },
   {
     icon: <Target className="text-pink-400" size={20} />,
-    title: "Specialist Focus",
+    title: "Sector-Focused Recruitment",
     image: "/img-pillar-specialist.jpg",
-    desc: "Exclusively focused on Health & Social Care and Construction — no diluted generalist recruitment."
+    desc: "Dedicated recruitment desks exclusively covering Health & Social Care and Construction."
+  },
+  {
+    icon: <HeartHandshake className="text-cyan-400" size={20} />,
+    title: "Personal Service",
+    image: "/img-candidate-screening.jpg",
+    desc: "Tailored account management and continuous support throughout every candidate placement."
   }
 ];
 
 const stats = [
   { value: '24/7', label: 'Support Operations' },
-  { value: '100%', label: 'DBS & RTW Audited' },
+  { value: '100%', label: 'Compliance Audited' },
   { value: '2', label: 'Specialist Divisions' },
   { value: '15012328', label: 'UK Company Reg.' },
 ];
@@ -62,22 +68,18 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7"
           >
-            <Badge variant="default" className="mb-4">About Norbitlink Limited</Badge>
+            <Badge variant="default" className="mb-4">About Us</Badge>
             <h2 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
-              Liverpool&apos;s Dedicated<br />
+              Your Trusted<br />
               <span className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
-                Specialist Staffing Partner
+                Recruitment Partner
               </span>
             </h2>
             <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-6">
-              Norbitlink Ltd is a UK-registered specialist recruitment agency based in the heart of Liverpool.
-              Our mission is simple: bridge the critical staffing gap by connecting vetted, high-calibre professionals
-              with care providers and construction contractors when they need them most.
+              Norbitlink Ltd is a Liverpool-based recruitment and workforce solutions company.
             </p>
             <p className="text-neutral-400 text-sm leading-relaxed mb-8">
-              Whether you need rapid temporary shift cover for a residential care home, qualified nurses,
-              or certified CPCS/CSCS trades on a commercial construction site — Norbitlink handles end-to-end vetting,
-              safeguarding, and compliance.
+              Our primary focus is <strong className="text-cyan-300 font-semibold">Health & Social Care</strong>, supported by our specialist <strong className="text-purple-300 font-semibold">Construction Recruitment</strong> division.
             </p>
 
             {/* Stats row */}
@@ -103,7 +105,7 @@ export default function About() {
               <div className="relative h-[340px] sm:h-[380px] w-full overflow-hidden">
                 <img
                   src="/img-liverpool.jpg"
-                  alt="Liverpool waterfront and skyline at dusk — Norbitlink Headquarters"
+                  alt="Norbitlink Limited — 131 Mount Pleasant, Liverpool"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
@@ -115,12 +117,12 @@ export default function About() {
                     <MapPin size={18} />
                   </div>
                   <div>
-                    <div className="text-xs font-mono font-bold text-white uppercase tracking-wider">Liverpool Headquarters</div>
+                    <div className="text-xs font-mono font-bold text-white uppercase tracking-wider">Norbitlink Limited</div>
                     <div className="text-xs text-neutral-400">131 Mount Pleasant, Liverpool, L3 5TF</div>
                   </div>
                 </div>
                 <span className="text-[11px] font-mono font-bold text-cyan-400 px-2 py-1 rounded bg-cyan-950/80 border border-cyan-800/50">
-                  Reg. 15012328
+                  Company: 15012328
                 </span>
               </div>
             </div>
@@ -128,82 +130,13 @@ export default function About() {
 
         </div>
 
-        {/* — PHOTO GRID: OUR DUAL SECTOR COMMITMENT — */}
-        <div className="mb-24">
-          <div className="flex items-center gap-4 mb-10">
-            <div>
-              <span className="text-xs uppercase font-mono font-bold text-cyan-400 block mb-1">Our Core Operations</span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Dedicated Sector Divisions</h3>
-            </div>
-            <Separator className="flex-1 hidden sm:block" />
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
-            {/* Sector 1 Photo Card */}
-            <div className="rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-xl flex flex-col group">
-              <div className="relative h-64 sm:h-72 w-full overflow-hidden">
-                <img
-                  src="/img-care-team.jpg"
-                  alt="Norbitlink Care Assistants collaborating at Liverpool care home nurses station"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/30 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <Badge variant="default">Health & Social Care</Badge>
-                </div>
-              </div>
-              <div className="p-8 flex flex-col flex-1 justify-between">
-                <div>
-                  <h4 className="text-xl font-bold text-white mb-2">Compassionate Healthcare Delivery</h4>
-                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-6">
-                    Providing residential care homes, supported living developments, and hospitals with fully audited, compassionate carers and nurses who prioritize resident dignity.
-                  </p>
-                </div>
-                <Link href="/services/healthcare" className="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 hover:text-cyan-300">
-                  <span>Explore Healthcare Staffing</span>
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Sector 2 Photo Card */}
-            <div className="rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-xl flex flex-col group">
-              <div className="relative h-64 sm:h-72 w-full overflow-hidden">
-                <img
-                  src="/img-electrician.jpg"
-                  alt="Commercial electrician testing sub-distribution board on UK commercial building development"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/30 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <Badge variant="purple">Construction & Trades</Badge>
-                </div>
-              </div>
-              <div className="p-8 flex flex-col flex-1 justify-between">
-                <div>
-                  <h4 className="text-xl font-bold text-white mb-2">Qualified Technical Trades</h4>
-                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-6">
-                    Supplying CSCS and CPCS carded carpenters, 18th Edition electricians, plant operators, and site managers for commercial developments and infrastructure works.
-                  </p>
-                </div>
-                <Link href="/services/construction" className="inline-flex items-center gap-2 text-xs font-bold text-purple-400 hover:text-purple-300">
-                  <span>Explore Construction Trades</span>
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* — MISSION BANNER — */}
+        {/* — MISSION BANNER (To connect reliable people with organisations that need them) — */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative rounded-3xl overflow-hidden border border-neutral-800 bg-neutral-900 mb-20 shadow-xl"
+          className="relative rounded-3xl overflow-hidden border border-neutral-800 bg-neutral-900 mb-24 shadow-xl"
         >
           <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-purple-400 to-pink-400" />
           <div className="p-8 md:p-10 lg:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
@@ -212,39 +145,39 @@ export default function About() {
                 <Award size={32} />
               </div>
               <div>
-                <span className="text-xs uppercase font-mono font-bold text-cyan-400 tracking-widest block mb-2">Our Operating Mission</span>
+                <span className="text-xs uppercase font-mono font-bold text-cyan-400 tracking-widest block mb-2">Our Mission</span>
                 <h3 className="text-2xl md:text-3xl xl:text-4xl font-extrabold text-white leading-snug">
-                  Connecting reliable, compassionate professionals<br className="hidden md:block" /> with organisations that need them.
+                  To connect reliable people with organisations that need them.
                 </h3>
                 <p className="text-xs text-neutral-400 mt-3 font-mono">
-                  Full Compliance with UK Employment Regulations • Equal Opportunity Employer • Safe Recruitment Standards
+                  Quality • Compliance • Reliability • Responsive Service
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col gap-2 shrink-0">
               <div className="flex items-center gap-2 text-xs font-mono text-cyan-300">
-                <CheckCircle2 size={14} className="text-cyan-400" /> NHS & CQC Standards Aligned
+                <CheckCircle2 size={14} className="text-cyan-400" /> Health & Social Care Focus
               </div>
               <div className="flex items-center gap-2 text-xs font-mono text-purple-300">
-                <CheckCircle2 size={14} className="text-purple-400" /> CITB & CSCS Verification
+                <CheckCircle2 size={14} className="text-purple-400" /> Construction Division
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* — WHY CHOOSE NORBITLINK PILLARS WITH INDIVIDUAL PHOTOS — */}
+        {/* — WHY NORBITLINK? (5 Core Points from Brief) — */}
         <div>
           <div className="flex items-center gap-4 mb-10">
             <div>
-              <span className="text-xs uppercase font-mono font-bold text-cyan-400 block mb-1">Our Core Pillars</span>
-              <h3 className="text-2xl font-extrabold text-white tracking-tight">Why Organisations Partner With Norbitlink</h3>
+              <span className="text-xs uppercase font-mono font-bold text-cyan-400 block mb-1">Our Pillars</span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Why Norbitlink?</h3>
             </div>
             <Separator className="flex-1 hidden sm:block" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyUs.map((item, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            {whyNorbitlinkList.map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -253,7 +186,7 @@ export default function About() {
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
                 className="group rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between shadow-xl"
               >
-                <div className="relative h-44 w-full overflow-hidden">
+                <div className="relative h-40 w-full overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -265,13 +198,13 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-1 justify-between">
+                <div className="p-5 flex flex-col flex-1 justify-between">
                   <div>
-                    <h4 className="text-base font-bold text-white mb-2">{item.title}</h4>
+                    <h4 className="text-base font-bold text-white mb-1.5">{item.title}</h4>
                     <p className="text-xs text-neutral-400 leading-relaxed mb-4">{item.desc}</p>
                   </div>
                   <div className="pt-3 border-t border-neutral-800 text-[11px] font-mono text-cyan-400 flex items-center gap-1">
-                    <CheckCircle2 size={12} /> Verified Standard
+                    <CheckCircle2 size={12} /> Norbitlink Advantage
                   </div>
                 </div>
               </motion.div>
