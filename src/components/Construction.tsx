@@ -60,7 +60,7 @@ export default function Construction() {
         <div className="absolute inset-0 bg-mesh-grid opacity-30 pointer-events-none" />
         <div className="absolute left-0 top-0 w-[500px] h-[400px] bg-purple-950/25 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 py-20">
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 pt-32 sm:pt-36 lg:pt-40 pb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content (7 cols) */}

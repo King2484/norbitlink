@@ -53,7 +53,7 @@ export default function Candidates() {
       {/* — PAGE HERO (Looking for Work?) — */}
       <div className="relative bg-neutral-950 border-b border-neutral-800 overflow-hidden">
         <div className="absolute inset-0 bg-mesh-grid opacity-30 pointer-events-none" />
-        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 py-20">
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 pt-32 sm:pt-36 lg:pt-40 pb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content (7 cols) */}

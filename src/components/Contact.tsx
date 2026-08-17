@@ -39,7 +39,7 @@ export default function Contact() {
       {/* — PAGE HEADER (Let's Talk) — */}
       <div className="relative bg-neutral-950 border-b border-neutral-800 overflow-hidden">
         <div className="absolute inset-0 bg-mesh-grid opacity-30 pointer-events-none" />
-        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 py-20">
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 pt-32 sm:pt-36 lg:pt-40 pb-16">
           <Badge variant="default" className="mb-4">Contact Us</Badge>
           <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white tracking-tight mb-4">
             Let&apos;s{' '}

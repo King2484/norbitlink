@@ -28,7 +28,7 @@ export default function Hero() {
   const { openEmployerModal, openCandidateModal } = useModal();
 
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-center bg-[#09090b] overflow-hidden pt-10 pb-20 border-b border-neutral-800">
+    <section className="relative min-h-[92vh] flex flex-col justify-center bg-[#09090b] overflow-hidden pt-32 sm:pt-36 lg:pt-40 pb-20 border-b border-neutral-800">
       
       {/* Background Gradients & Mesh Grid */}
       <div className="absolute inset-0 bg-mesh-grid opacity-40 pointer-events-none" />
